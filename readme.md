@@ -5,7 +5,7 @@ Memo files for programming in C
 C言語を勉強するためのメモ
 
 /extention の中には、Cで書いたRubyの拡張があります<br/>
-<a href="">この記事</a>を読んで結構分かりやすかった<br/>
+<a href="http://ser1zw.hatenablog.com/entry/20111217/1324133118" target="_blank" >この記事</a>を読んで結構分かりやすかった<br/>
 
 テストするには次のをする：
 ```
