@@ -24,7 +24,7 @@ void Init_foo()
   /* Fooクラスを定義 */
   cFoo = rb_define_class("Foo", rb_cObject);
 
-  /* Fooクラスに引数0個のbarメソッドを定義
+  /* Fooクラスに引数3個のbarメソッドを定義
    * barメソッドが呼ばれると、bar_funcが実行される
    */
   rb_define_method(cFoo, "bar", RUBY_METHOD_FUNC(bar_func), 3);
