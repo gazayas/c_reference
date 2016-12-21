@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int min_max(int ary[], int *min, int *max, int size);
+
 int main(void) {
 
   int num = 15;
@@ -73,8 +75,39 @@ int main(void) {
    */
 
 
+  /* 教科書の練習問題の１つ */
+
+  int ary[10];
+  int min;
+  int max;
+  for(i = 0; i < 10; i++) {
+    printf("%d番目の数字を入力してください：", i);
+    scanf("%d", &ary[i]);
+  }
+
+  int size = sizeof(ary)/sizeof(ary[0]);
+  printf("sizeは：%d\n", size);
+  min_max(ary, &min, &max, size);
+
+  printf("min: %d  max: %d\n", min, max);
+
   return 0;
 
 }
 
-
+int min_max(int ary[], int *min, int *max, int size)
+{
+  *min = 100;
+  *max = 0;
+  int i;
+  int n;
+  for(i = 0; i < size; i++) {
+    if(ary[i] < *min){
+      *min = ary[i];
+    }
+    else if(ary[i] > *max){
+      *max = ary[i];
+    }
+  }
+  return 0;
+}
