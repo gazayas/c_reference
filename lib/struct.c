@@ -78,6 +78,8 @@ int main(void){
 
 /*
 
+ * １６章の練習問題
+
 #include <stdio.h>
 #include <string.h>
 
