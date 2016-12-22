@@ -47,7 +47,6 @@ int main(void){
   student_print(data);
 
   /* ポインタを使って学年と名前を変えます */
-
   student *pdata;
   pdata = &data;
   (*pdata).year = 10;
@@ -65,14 +64,72 @@ int main(void){
    * 各要素にアクセスできます。
    */
 
-  /* pdata = &dataをしてから〜〜〜 */
+  /* pdata = &dataをしてから〜〜〜 */ 
   pdata->year = 3;
   strcpy(pdata->name, "ガブリエル");
   student_print(data);
 
-  /* 構造体型のポインタを関数に渡す例 */
+  /* 構造体型のポインタを関数に渡す例 */  
   pointer_student_print(&data);
 
   return 0;
 
 }
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+  char name[256];
+  int age;
+  int sex;
+} person;
+
+void person_insert(person *data)
+{
+  printf("名前：");
+  scanf("%s", data->name);
+  printf("年齢：");
+  scanf("%d", &data->age);
+  printf("性別（１-男性、２-女性）：");
+  scanf("%d", &data->sex);
+  printf("\n");
+}
+
+void person_print(person data)
+{
+  char sex[16];
+
+  printf("名前：%s\n", data.name);
+  printf("年齢：%d\n", data.age);
+
+  if(data.sex == 1){
+    strcpy(sex, "男性");
+  } else {
+    strcpy(sex, "女性");
+  }
+
+  printf("性別：%s", sex);
+  printf("\n");
+
+}
+
+int main(void){
+
+  person data[3];
+  int i;
+
+  for(i = 0; i < 3; i++){
+    person_insert(&data[i]);
+  }
+  for(i = 0; i < 3; i++){
+    person_print(data[i]);
+  }
+  
+  return 0;
+}
+
+*/
