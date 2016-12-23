@@ -59,6 +59,8 @@ int main(void){
     person_print(heap[i]);
   }
 
+  /* 後realloc()を活用してもう一度違う人数で同じことをしてもいいかもしれない */
+
   free(heap);
   
   return 0;
