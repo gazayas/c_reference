@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h> /* これは必要です */
 
+
+/* メモリリークに関する記事
+ * http://qiita.com/sawasaka/items/2df474fc00ec2105acab
+ * https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%AF
+ */
+
 /*
  * malloc() (Memory Allocateという意味) とfree()を使います
  * 普段は配列の大きさを一発で定義するのですが、
